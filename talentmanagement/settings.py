@@ -9,6 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Access environment variables
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool, default=False)
+ALLOWED_HOSTS = list(config('ALLOWED_HOSTS'))
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
@@ -22,9 +23,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-# Allowed hosts
-ALLOWED_HOSTS = []
 
 # Static variables
 STATIC_URL = 'static/'

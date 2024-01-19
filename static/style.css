@@ -1,0 +1,176 @@
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .nav-item:hover .nav-link {
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0;
+    }
+}
+
+body::before {
+    display: block;
+    content: '';
+}
+
+.font-large {
+    font-size: 133%;
+}
+
+.font-xlarge {
+    font-size: 166%;
+}
+
+.image-large {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.image-xlarge {
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 1.7s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 0.8s ease-in;
+}
+
+.active.fade-left {
+    animation: fade-left 0.8s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 0.8s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.link-unstyled {
+    text-decoration: none;
+}
+
+.texto-branco {
+    color: white;
+}
+
+.texto-branco:hover {
+    color: #E4A11B;
+    transition-duration: 0.25s;
+}
+
+.text-blue {
+    color: #00A8E8;
+}
+
+.text-blue-dark {
+    color: rgb(0, 52, 89)
+}
+
+.text-blue-lighter {
+    color: rgba(0, 52, 89, 0.11);
+}
+
+.text-blue-light {
+    color: rgba(0, 168, 232, 0.59);
+}
+
+.bg-blue-light {
+    background-color: rgba(0, 168, 232, 0.11);
+}
+
+.bg-blue-lighter {
+    background-color: rgba(139, 200, 247, 0.59);
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: static;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.video {
+    position: relative;
+}
+
+.video-text {
+    position: absolute;
+    top: 83%;
+    right: 0;
+    font-size: 350%;
+}
+
+.dropdown-hover:hover {
+    background-color: rgba(0, 168, 232, 0.30);
+    color: #E4A11B;
+    font-weight: bold;
+}
+
+@media (max-width: 575.98px) {
+    .form-control2 {
+        width: 95%;
+    }
+}
+
+.botao:hover {
+    color: #E4A11B;
+    transition-duration: 0.25s;
+}
+
+
+

@@ -1,0 +1,1 @@
+web gunicorn talentmanagement.wsgi:application --log-file -

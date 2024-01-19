@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  {#Strategic starts#}
+  <section class="sec py-sm-5 pt-5 pb-4">
+    <div class="container mt-5">
+      <div class="card" style="max-height: 100%;">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-md-2 order-1 text-center">
+            <img src="{% static 'images/6a.jpg' %}" class="mt-4 image-xlarge img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-lg-6 order-md-1 order-2 pt-4 pt-sm-0">
+            <div class="card-body font-large">
+              <h2 class="card-title text-blue fw-bold pb-4">Strategic Human Resourcing</h2>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-building-circle-check text-blue"></i>&nbsp;&nbsp;Elevate
+                your
+                business with our working philosophy, turning human resources into a
+                <span class="fw-bold text-blue">transformative asset.</span></p>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-handshake-simple text-blue"></i>&nbsp;&nbsp;Beyond
+                services, we forge <span class="fw-bold text-blue">lasting
+                partnerships</span> focused on aligning with your goals.</p>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-chart-line text-blue"></i>&nbsp;&nbsp;Let HR
+                be
+                your catalyst for <span class="fw-bold text-blue">growth</span>, <span class="fw-bold text-blue">efficiency</span>,
+                and <span class="fw-bold text-blue">sustained success.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {#Strategic ends#}
+
+  {#Solutions starts#}
+  <section class="sec py-1 pb-5" style="background-color: #00A8E8;">
+    <div class="container reveal fade-bottom mt-3 mt-sm-5">
+      <div class="card pb-3" style="max-height: 100%; background-color: #00A8E8;">
+        <div class="row mt-5">
+          <div class="col-md-6 order-md-2 order-1">
+            <div class="card-body font-large">
+              <h2 class="text-white fw-bold pb-sm-3">Crafting Tailored Solutions</h2><br>
+              <p class="fw-bold text-blue-dark"><i class="fa-solid fa-lightbulb text-warning"></i>&nbsp; &nbsp;We
+                recognize
+                your business's uniqueness, bringing <span class="text-warning">tailored solutions.</span></p>
+              <p class="fw-bold text-blue-dark"><i class="fa-solid fa-users text-warning"></i>&nbsp; &nbsp;Our
+                consulting
+                services cater to <span class="text-warning">your specific
+                  needs</span>, be it challenges, team growth, or cultural
+                shifts.</p>
+              <p class="fw-bold text-blue-dark"><i class="fa-solid fa-dna text-warning"></i>&nbsp; &nbsp;Rely on our
+                experts
+                for customized strategies aligned
+                with your <span class="text-warning">organizational DNA.</span></p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1 order-2 text-center align-self-center pt-3 pt-sm-0 pb-4 pb-sm-0">
+            <img src="{% static 'images/4a.jpg' %}" class="img-fluid rounded-5 image-xlarge" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {#Solutions ends#}
+
+  {#Operational starts#}
+  <section class="sec py-sm-1 pt-5 pb-4 mb-5">
+    <div class="container reveal fade-bottom mt-5">
+      <div class="card" style="max-height: 100%;">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-md-2 order-1 text-center">
+            <img src="{% static 'images/5a.jpg' %}" class="image-xlarge img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-lg-6 order-md-1 order-2 pt-4 pt-sm-0">
+            <div class="card-body font-large">
+              <h2 class="card-title text-blue fw-bold pb-4">Building Long-Term Competitiveness</h2>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-trophy text-blue"></i>&nbsp;&nbsp;Navigate
+                the dynamic business landscape with our focus on strategic HR for <span class="text-blue">sustained competitiveness.</span></p>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-magnifying-glass-chart text-blue"></i>&nbsp;&nbsp;Our
+                partnerships endure by understanding trends,
+                <span class="text-blue">embracing innovation,</span> and collaborative efforts.</p>
+              <p class="fw-bold text-blue-dark pt-1"><i class="fa-solid fa-user-check text-blue"></i>&nbsp;&nbsp;Position
+                your business for <span class="text-blue">long-term success</span> with HR
+                practices evolving alongside industry demands.</p>
+              <a role="button" class="botao btn btn-lg align-self-center mt-3 fw-bold text-white"
+                 style="background-color: #00A8E8" href="{% url 'home' %}#reviews"><i
+                  class="bi bi-chevron-right"></i>Our Reviews</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {#Operational ends#}
+
+{% endblock content %}

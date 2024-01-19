@@ -1,0 +1,99 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TalentManagement</title>
+  <link rel="stylesheet" href="{% static 'css-bs/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+{#Navbar starts#}
+{% include 'navbar.html' %}
+{#Navbar ends#}
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% block content %}
+
+{% endblock content %}
+
+
+<!--Footer starts-->
+<section style="background-color: #00171F">
+  <footer class="text-center texto-branco">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://www.facebook.com/david.buckley.1806/"
+          role="button"
+      ><i class="bi bi-facebook texto-branco"></i
+      ></a>
+
+      <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://www.linkedin.com/in/david-buckley-75b5b1186/"
+          role="button"
+      ><i class="bi bi-linkedin texto-branco"></i
+      ></a>
+
+      <a
+          data-mdb-ripple-init
+          class="btn btn-link btn-floating btn-lg text-body m-1"
+          href="https://github.com/davidbuckley96"
+          role="button"
+      ><i class="bi bi-github texto-branco"></i
+      ></a>
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white">
+      © 2024 Copyright:
+      <a class="texto-branco" href="https://github.com/davidbuckley96">David Buckley</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</section>
+<!--Footer ends-->
+
+<script src="{% static 'js-bs/bootstrap.js' %}"></script>
+<script src="{% static 'scripts.js' %}"></script>
+<script type="text/javascript">
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+
+</script>
+
+<script src="https://kit.fontawesome.com/9c4207962b.js" crossorigin="anonymous"></script>
+</body>
+</html>

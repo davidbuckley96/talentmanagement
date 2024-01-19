@@ -1,0 +1,38 @@
+{% load static %}
+
+<!--Navbar starts-->
+<header>
+  <nav class="navbar navbar-dark navbar-expand-lg py-2 fixed-top" style="background-color: rgba(0,23,31,0.74);">
+    <div class="container">
+      <a href="{% url 'home' %}#" class="navbar-brand font-xlarge fw-medium texto-branco"><img
+          src="{% static 'images/tm-logo.png' %}" style="height: 45px; width: 75px;" alt="">TalentManagement</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="main_nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item nav-active px-1">
+            <a href="{% url 'home' %}#about" class="nav-link texto-branco fw-medium font-large nav-active">About Us</a>
+          </li>
+          <li class="nav-item px-1">
+            <a href="{% url 'home' %}#why" class="nav-link texto-branco fw-medium font-large">Why Us</a>
+          </li>
+          <li class="nav-item px-1">
+            <a href="{% url 'home' %}#reviews" class="nav-link texto-branco fw-medium font-large">Reviews</a>
+          </li>
+          <li class="nav-item px-1">
+            <a href="{% url 'home' %}#contact" class="nav-link texto-branco fw-medium font-large">Contact</a>
+          </li>
+          {% if articles %}
+            <li class="nav-item ps-1">
+              <a href="{% url 'home' %}#articles" class="nav-link texto-branco fw-medium font-large">Articles</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--Navbar ends-->

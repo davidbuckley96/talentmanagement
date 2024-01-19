@@ -1,0 +1,355 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <body>
+  {#Navbar starts#}
+  {% include 'navbar.html' %}
+  {#Navbar ends#}
+
+  <!--Showcase starts-->
+  <section class="">
+    <div class="view video">
+      <video id="background-video" style="height: 620px;" autoplay loop muted
+             poster="{% static 'images/placeholder.png' %}">
+        <source src="{% static 'video/video.mp4' %}" type="video/mp4">
+      </video>
+      {#         style="background-image: url('{% static "images/hr-1.jpg" %}'); opacity: 1;  background-repeat: no-repeat; background-size: cover; background-position: center center;">#}
+      <div class="container">
+        <div class="container d-flex justify-content-start align-items-start">
+        </div>
+      </div>
+
+      <div style="background-color: rgba(217,217,217,0.31);">
+        <div class="container d-flex justify-content-center justify-content-md-end video-text">
+          <a href="#about" class="link-unstyled"><p class="text-blue display- fw-bolder">Tell me <span
+              class="text-warning">about</span>.</p></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Showcase ends-->
+
+
+
+  <!--About starts-->
+  <section id="about" class="sec py-sm-5 pt-5 pb-4 mb-5">
+    <div class="container reveal fade-bottom mt-5">
+      <div class="card" style="max-height: 100%;">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center">
+            <img src="{% static 'images/happy-woman.jpg' %}" class="image-xlarge img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-lg-6 pt-4 pt-sm-0">
+            <div class="card-body font-large">
+              <h2 class="card-title text-blue fw-bold pb-4">Discover Optimal Talents</h2>
+              <p class="fw-bold text-blue-dark pt-1">
+                <i class="bi bi-check2-square text-blue font-large"></i>&nbsp; We exceed expectations, using <span
+                  class="fw-bold text-blue">innovative strategies</span> for
+                ideal professionals.</p>
+              <p class="fw-bold text-blue-dark"><i class="bi bi-check2-square text-blue font-large"></i>&nbsp; Our
+                dedicated team ensures hires contribute to <span
+                    class="fw-bold text-blue">organizational success</span>.</p>
+              <p class="fw-bold text-blue-dark>"><i class="bi bi-check2-square text-blue font-large"></i>&nbsp; We
+                connect
+                exceptional talent,
+                driving <span class="fw-bold text-blue">growth and excellence</span>.</p>
+              <a role="button" class="botao btn btn-lg align-self-center mt-3 fw-bold text-white"
+                 style="background-color: #00A8E8" href="{% url 'about' %}"><i
+                  class="bi bi-chevron-right"></i>&nbsp;Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--About ends-->
+
+
+  <!--Why us starts-->
+  <section id="why" class="sec py-5" style="background-color: #00A8E8;">
+    <div class="container reveal fade-bottom mt-3 mt-sm-5">
+      <div class="card" style="max-height: 100%; background-color: #00A8E8;">
+        <div class="row">
+          <div class="col-md-6 order-md-1 order-2">
+            <div class="card-body font-large">
+              <h2 class="text-white fw-bold pb-sm-3">Business Oriented Consulting</h2><br>
+              <p class="text-blue-dark fw-bold"><i class="bi bi-check2-square text-warning font-large"></i>&nbsp;
+                Custom consulting
+                drives <span
+                    class="text-warning">transformative impact.</span></p>
+              <p class="fw-bold text-blue-dark"><i
+                  class="bi bi-check2-square text-warning font-large"></i>&nbsp; Specialized in strategic
+                solutions, <span class="text-warning">enhancing efficiency.</span></p>
+              <p class="fw-bold text-blue-dark"><i
+                  class="bi bi-check2-square text-warning font-large"></i>&nbsp; Building partnerships anticipates
+                trends, ensuring
+                <span class="text-warning fw-bold">long-term competitiveness.</span></p>
+              <a role="button" class="botao btn btn-lg mt-3 text-white fw-bold" style="background-color: rgb(0, 52, 89)"
+                 href="{% url 'why-us' %}"><i
+                  class="bi bi-chevron-right"></i>&nbsp;See More</a>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-2 order-1 text-center align-self-center pt-3 pt-sm-0 pb-4 pb-sm-0">
+            <img src="{% static 'images/consulting.jpg' %}" class="img-fluid rounded-5 image-xlarge" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Why us ends-->
+
+  {#Reviews starts#}
+  <section class="sec pt-5" id="reviews">
+    <div class="container mt-5 reveal fade-bottom">
+      <h2 class="text-blue fw-bold text-sm-center text-start pb-2 ms-sm-0 ms-3">What People Think of Us</h2><br>
+      <div id="carouselExampleControlsNoTouching" class="carousel carousel-dark slide mb-5 pt-1" data-bs-touch="false"
+           data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {#Page 1#}
+          <div class="carousel-item active" data-bs-interval="4000">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Ana Simpson</h3>
+                    <p class="fw-medium card-text">"Their <span class="fw-normal text-blue fw-bold">commitment to excellence</span>
+                      resulted in superb hires, exceeding our expectations."</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                        class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                        class="bi bi-star-half"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Emma Johnson</h3>
+                    <p class="fw-medium card-text">"Our experience was fantastic. They made the entire hiring journey
+                      <span
+                          class="fw-normal text-blue fw-bold">smooth and
+                    efficient.</span>"</p>
+                    <div class="pt-">
+                      <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                          class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                          class="bi bi-star-fill"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Oliver Brown</h3>
+                    <p class="fw-medium card-text">"Highly recommend! <span class="fw-normal text-blue fw-bold">Their expertise</span>
+                      is truly a differential on HR industry."</p>
+                    <div class="pt-xl-4">
+                      <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                          class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                          class="bi bi-star-fill"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {#Page 2#}
+          <div class="carousel-item" data-bs-interval="4000">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Mia Davis</h3>
+                    <p class="fw-medium card-text">"They found perfect fits, <span
+                        class="fw-normal text-blue fw-bold">greatly boosting</span> our
+                      team's capabilities. An exceptional partner!"</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                        class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                        class="bi bi-star-fill"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/men/31.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Bob ross</h3>
+                    <p class="fw-medium card-text">"The strategies employed brought about <span
+                        class="fw-normal text-blue fw-bold">substantial
+                    improvements</span>. Highly impressed!"</p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                        class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                        class="bi bi-star-half"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/men/35.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">John Wilson</h3>
+                    <p class="fw-medium card-text">"A game-changer! The responsive team provided <span
+                        class="fw-normal text-blue fw-bold">tailored solutions</span> for our needs."</p>
+                    <div class="pt-xl-4">
+                      <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                          class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                          class="bi bi-star-half"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {#Page 3#}
+          <div class="carousel-item" data-bs-interval="4000">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/17.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Sophia Taylor</h3>
+                    <p class="fw-medium card-text">"Great hiring experience, and their
+                      consulting was key to our <span class="fw-normal text-blue fw-bold">organizational growth.</span>"
+                    </p>
+                    <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                        class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                        class="bi bi-star-fill"></i></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Abigail Jones</h3>
+                    <p class="fw-medium card-text">"HR excellence defined our partnership.A <span
+                        class="fw-normal text-blue fw-bold">reliable and trusted</span>
+                      partner in every
+                      sense."</p>
+                    <div class="pt-xl-4">
+                      <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                          class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                          class="bi bi-star-fill"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div class="card bg-blue-light rounded-5 mb-lg-0 mb-3">
+                  <div class="card-body text-center" style="height: 340px">
+                    <img src="https://randomuser.me/api/portraits/women/31.jpg" class="rounded-circle mb-3" alt="">
+                    <h3 class="text-blue-dark mb-3">Amelia Clark</h3>
+                    <p class="fw-medium card-text">"Their <span
+                        class="fw-normal text-blue fw-bold">reliability and professionalism</span> make them a standout
+                      in
+                      the
+                      industry."</p>
+                    <div class="pt-xl-4">
+                      <p class="text-warning"><i class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp;<i
+                          class="bi bi-star-fill"></i>&nbsp;<i class="bi bi-star-fill"></i>&nbsp<i
+                          class="bi bi-star-fill"></i></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev pe-5" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next ps-5" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  {#Reviews ends#}
+
+  <!--Contact starts-->
+  <section id="contact" class="sec py-4" style="background-color: #00A8E8;">
+    <div class="container reveal fade-bottom pt-5">
+      <div class="card" style="max-height: 100%; background-color: #00A8E8;">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center">
+            <img src="{% static 'images/contact.jpg' %}" class="img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-md-6 pb-4 ps-2 ps-sm-5">
+            <h2 class="text-white fw-bold pt-3 pb-4">Contact Us</h2>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="mb-1 ms-sm-0 ms-2">
+                <label for="exampleFormControlInput1" class="form-label fw-bold font-large text-warning">Email
+                  address</label>
+                <input name="email" type="email" class="form-control2 font-large bg-blue-lighter fw-medium"
+                       id="exampleFormControlInput1"
+                       placeholder="valid-email@gmail.com">
+              </div>
+              <div class="mb-3 ms-sm-0 ms-2">
+                <label for="exampleFormControlTextarea1" class="form-label fw-bold font-large pt-3 text-warning">Enter
+                  your
+                  message</label>
+                <textarea name="message" class="form-control2 font-large bg-blue-lighter fw-medium"
+                          id="exampleFormControlTextarea1"
+                          rows="7"
+                          placeholder="Write any message, you will receive a success email afterwards."></textarea>
+              </div>
+              <button type="submit" class="botao btn mt-3 btn-lg fw-bold text-white"
+                      style="background-color: rgb(0, 52, 89)">
+                <i
+                    class="bi bi-chevron-right"></i>&nbsp;Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Contact ends-->
+
+  {% if articles %}
+    <!--Articles starts-->
+    <section id="articles" class="pt-5">
+      <div class="container pt-sm-5 pt-0 pb-4 pb-sm-5 reveal fade-bottom">
+        <h2 class="text-blue fw-bold pb-3 pb-sm-4 ps-3 mb-4">Recent Articles</h2>
+        <div class="row ps-5">
+          <div class="justify-content-center pt-1 card col-md-6 align-items-center">
+            <a href="{% url 'article' pk=article_1.id %}" class="link-unstyled mb-3">
+              <img src="{{ article_1.image.url }}" class="image-large card-img-top rounded-2" alt="...">
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold text-blue">{{ article_1.name }}</h5>
+              <p class="card-text fw-medium text-blue-dark">{{ article_1.description }}</p>
+            </div>
+          </div>
+          <div class="justify-content-center pt-1 card col-md-6 align-items-center">
+            <a href="{% url 'article' pk=article_2.id %}" class="link-unstyled mb-3">
+              <img src="{{ article_2.image.url }}" class="image-large card-img-top rounded-2" alt="...">
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold text-blue">{{ article_2.name }}</h5>
+              <p class="card-text fw-medium text-blue-dark">{{ article_2.description }}</p>
+            </div>
+          </div>
+        </div>
+        <a role="button" class="botao btn btn-lg align-self-center mt-3 fw-bold text-white"
+           style="background-color: #00A8E8" href="{% url 'articles-list' %}"><i
+            class="bi bi-chevron-right"></i>&nbsp;All Articles</a>
+      </div>
+    </section>
+    <!--Articles ends-->
+  {% endif %}
+
+{% endblock content %}
+

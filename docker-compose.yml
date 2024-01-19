@@ -1,0 +1,28 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  web:
+    build: ./app
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; gunicorn hello_django.wsgi:application --bind 0.0.0.0:8000'
+    volumes:
+      - ./app/:/usr/src/app/
+      - static_volume:/usr/src/app/staticfiles
+      - media_volume:/usr/src/app/mediafiles
+    expose:
+      - 8000
+    environment:
+      - SECRET_KEY=please_change_me
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=postgres
+      - SQL_USER=postgres
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=db
+      - SQL_PORT=5432
+      - DATABASE=postgres
+      - USE_S3=TRUE
+      - AWS_ACCESS_KEY_ID=UPDATE_ME
+      - AWS_SECRET_ACCESS_KEY=UPDATE_ME
+      - AWS_STORAGE_BUCKET_NAME=UPDATE_ME
+    depends_on:
+      - db

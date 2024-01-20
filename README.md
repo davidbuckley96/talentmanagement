@@ -65,7 +65,7 @@ Lastly, because of maintenance costs, I eventually had to revert to the SQLite d
 Open your terminal and create a folder to hold the project with ```mkdir folder_name```. use ```cd folder_name``` and type ```git init```. Copy ```git clone https://github.com/davidbuckley96/talentmanagement.git``` and paste it on your terminal. Then, ```cd talentmanagement```.
 2. **Inside the project folder, use ```pip install virtualenv```** <br>
 3. **Type ```virtualenv myenv```, then ```myenv\scripts\activate```, and ```pip install -r requirements.txt```** <br>
-4. **Open your python interpreter and type again ```myenv\scripts\activate```**<br>
+4. **Open your python interpreter and open its terminal, then type again ```myenv\scripts\activate```**<br>
 5. **Create a ```.env``` file on the root directory** <br>
 6. **Copy the code below and paste it all inside ```.env``` (variables like ```EMAIL_HOST_USER``` and ```EMAIL_HOST_PASSWORD``` should be changed to valid email credentials if you want to test the email sending functionality):** <br>
 ```
@@ -79,8 +79,7 @@ AWS_DEFAULT_ACL=None
 AWS_S3_CUSTOM_DOMAIN=aws.amazon.com
 ALLOWED_HOSTS=*
 ```
-7. **Run migrations with ```python manage.py migrate```** <br>
-8. **Start the server in localhost with ```python manage.py runserver```** <br>
+8. **Start the server in localhost with ```python manage.py runserver``` in your terminal** <br>
 
 
 

@@ -28,13 +28,20 @@ def home(request):
         )
 
         # Sending the email
-        send_mail('Hello from David Buckley',
-                  f'Hey there, {email}, it worked! You are receiving this email to confirm the following message has reached us: \n"{message}". \nThanks for using my website!\n\nBest regards, \nDavid Buckley.',
-                  'settings.EMAIL_HOST_USER',
-                  [email],
-                  fail_silently=False)
-        messages.success(request, 'Email sent!')
-        return redirect('home')
+        try:
+            send_mail('Hello from David Buckley',
+                      f'Hey there, {email}, it worked! You are receiving this email to confirm that the following message has reached us: \n"{message}". \nThanks for using my website!\n\nBest regards, \nDavid Buckley.',
+                      'settings.EMAIL_HOST_USER',
+                      [email],
+                      fail_silently=False)
+            messages.success(request, 'Email sent!')
+            return redirect('home')
+        except:
+            print(f'[from: {settings.EMAIL_HOST_USER}]\n'
+                  f'[to: {email}]\n'
+                  f'[sent: {datetime.today()}]\n\n'
+                  f'Hello from David Buckley\n'
+                  f'Hey there, {email}, it worked! You are receiving this email to confirm that the following message has reached us: \n"{message}". \nThanks for using my website!\n\nBest regards, \nDavid Buckley.')
 
     if articles:
         context = {'articles': articles, 'article_1': article_1, 'article_2': article_2}

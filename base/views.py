@@ -20,16 +20,18 @@ def home(request):
         email = request.POST.get('email')
         message = request.POST.get('message')
 
+        # Saving to the Database
         ContactForm.objects.create(
             email=email,
             message=message,
             date_sent=datetime.today()
         )
 
+        # Sending the email
         send_mail('Hello from David Buckley',
-                  f'Hey there, {email}, it worked! You are receiving this email to confirm the following message have reached us: \n"{message}". \nThanks for using my website!\n\nBest regards, \nDavid Buckley.',
+                  f'Hey there, {email}, it worked! You are receiving this email to confirm the following message has reached us: \n"{message}". \nThanks for using my website!\n\nBest regards, \nDavid Buckley.',
                   'settings.EMAIL_HOST_USER',
-                  [email, 'davidbuckley12345@gmail.com'],
+                  [email],
                   fail_silently=False)
         messages.success(request, 'Email sent!')
         return redirect('home')

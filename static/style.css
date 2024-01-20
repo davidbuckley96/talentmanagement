@@ -13,6 +13,16 @@
     .navbar .nav-item .dropdown-menu {
         margin-top: 0;
     }
+
+    .video-text {
+        position: absolute;
+        top: 83%;
+        right: 80%;
+        /*font-size: 350%;*/
+    }
+    .abs {
+        position: relative;
+    }
 }
 
 body::before {

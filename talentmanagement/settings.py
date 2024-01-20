@@ -6,9 +6,9 @@ import os
 # Root directory relative location
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DEBUG = True
 # Access environment variables
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', cast=bool, default=False)
 ALLOWED_HOSTS = list(config('ALLOWED_HOSTS'))
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

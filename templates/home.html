@@ -23,14 +23,13 @@
 
       <div style="background-color: rgba(217,217,217,0.31);">
         <div class="container d-flex justify-content-center justify-content-md-end video-text">
-          <a href="#about" class="link-unstyled"><p class="text-blue display- fw-bolder">Tell me <span
-              class="text-warning">about</span>.</p></a>
+          <a href="#about" class="link-unstyled"><p class="text-blue display- fw-bolder">Who are <span
+              class="text-warning">we</span>?</p></a>
         </div>
       </div>
     </div>
   </section>
   <!--Showcase ends-->
-
 
 
   <!--About starts-->
@@ -61,7 +60,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -69,11 +67,14 @@
 
 
   <!--Why us starts-->
-  <section id="why" class="sec py-5" style="background-color: #00A8E8;">
-    <div class="container reveal fade-bottom mt-3 mt-sm-5">
+  <section id="why" class="sec py-sm-5 pt-5 pb-4 mb-5" style="background-color: #00A8E8;">
+    <div class="container reveal fade-bottom mt-5">
       <div class="card" style="max-height: 100%; background-color: #00A8E8;">
-        <div class="row">
-          <div class="col-md-6 order-md-1 order-2">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center order-1 order-lg-2">
+            <img src="{% static 'images/consulting.jpg' %}" class="image-xlarge img-fluid rounded-5" alt="...">
+          </div>
+          <div class="col-lg-6 pt-4 pt-sm-0 order-2 order-lg-1">
             <div class="card-body font-large">
               <h2 class="text-white fw-bold pb-sm-3">Business Oriented Consulting</h2><br>
               <p class="text-blue-dark fw-bold"><i class="bi bi-check2-square text-warning font-large"></i>&nbsp;
@@ -92,14 +93,12 @@
                   class="bi bi-chevron-right"></i>&nbsp;See More</a>
             </div>
           </div>
-          <div class="col-md-6 order-md-2 order-1 text-center align-self-center pt-3 pt-sm-0 pb-4 pb-sm-0">
-            <img src="{% static 'images/consulting.jpg' %}" class="img-fluid rounded-5 image-xlarge" alt="...">
-          </div>
         </div>
       </div>
     </div>
   </section>
   <!--Why us ends-->
+
 
   {#Reviews starts#}
   <section class="sec pt-5" id="reviews">
@@ -282,10 +281,10 @@
     <div class="container reveal fade-bottom pt-5">
       <div class="card" style="max-height: 100%; background-color: #00A8E8;">
         <div class="row align-items-center">
-          <div class="col-md-6 text-center">
+          <div class="col-lg-6 text-center order-sm-1">
             <img src="{% static 'images/contact.jpg' %}" class="img-fluid rounded-5" alt="...">
           </div>
-          <div class="col-md-6 pb-4 ps-2 ps-sm-5">
+          <div class="col-lg-6 pt-4 pt-sm-0 order-sm-2">
             <h2 class="text-white fw-bold pt-3 pb-4">Contact Us</h2>
             <form action="" method="POST">
               {% csrf_token %}
@@ -324,7 +323,7 @@
       <div class="container pt-sm-5 pt-0 pb-4 pb-sm-5 reveal fade-bottom">
         <h2 class="text-blue fw-bold pb-3 pb-sm-4 ps-3 mb-4">Recent Articles</h2>
         <div class="row ps-5">
-          <div class="justify-content-center pt-1 card col-md-6 align-items-center">
+          <div class="justify-content-center pt-1 card col-lg-6 align-items-center">
             <a href="{% url 'article' pk=article_1.id %}" class="link-unstyled mb-3">
               <img src="{{ article_1.image.url }}" class="image-large card-img-top rounded-2" alt="...">
             </a>
@@ -333,7 +332,7 @@
               <p class="card-text fw-medium text-blue-dark">{{ article_1.description }}</p>
             </div>
           </div>
-          <div class="justify-content-center pt-1 card col-md-6 align-items-center">
+          <div class="justify-content-center pt-5 pt-lg-1 card col-lg-6 align-items-center">
             <a href="{% url 'article' pk=article_2.id %}" class="link-unstyled mb-3">
               <img src="{{ article_2.image.url }}" class="image-large card-img-top rounded-2" alt="...">
             </a>

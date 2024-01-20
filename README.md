@@ -67,7 +67,7 @@ Open your terminal and create a folder to hold the project with ```mkdir folder_
 3. **Type ```virtualenv myenv```, then ```myenv\scripts\activate```, and ```pip install -r requirements.txt```** <br>
 4. **Open your python interpreter and open its terminal, then type again ```myenv\scripts\activate```**<br>
 5. **Create a ```.env``` file on the root directory** <br>
-6. **Copy the code below and paste it all inside ```.env``` (variables like ```EMAIL_HOST_USER``` and ```EMAIL_HOST_PASSWORD``` should be changed to valid email credentials if you want to test the email sending functionality):** <br>
+6. **Copy the code below and paste it all inside ```.env```:** <br>
 ```
 SECRET_KEY=random-secret-key-value
 EMAIL_HOST_USER=your-address@email.com
@@ -80,6 +80,13 @@ AWS_S3_CUSTOM_DOMAIN=aws.amazon.com
 ALLOWED_HOSTS=*
 ```
 8. **Start the server in localhost with ```python manage.py runserver``` in your terminal** <br>
+9. **Please note that due to security reasons the cloned repository's ```EMAIL_HOST_USER``` and ```EMAIL_HOST_PASSWORD``` variables are different from the production-ready project. For that reason, you can see a replica of the email which was supposed to be sent on the interpreter terminal; alternatively, you can set those variables to real email address and a SMTP provider app connection password (visit [Sign in with app passwords](https://support.google.com/mail/answer/185833?hl=en) if you don't know how to do so).**
+<br><br><br><br>
+Feel free to use this project as a study source, but not for commercial purposes.
+<br><br>
+David Buckley
+<br>
+January/2024
 
 
 

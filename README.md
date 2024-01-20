@@ -83,11 +83,5 @@ ALLOWED_HOSTS=*
 9. **Please note that due to security reasons the cloned repository's ```EMAIL_HOST_USER``` and ```EMAIL_HOST_PASSWORD``` variables are different from the production-ready project. For that reason, you can see a replica of the email which was supposed to be sent on the interpreter terminal; alternatively, you can set those variables to real email address and a SMTP provider app connection password (visit [Sign in with app passwords](https://support.google.com/mail/answer/185833?hl=en) if you don't know how to do so).**
 <br><br><br><br>
 Feel free to use this project as a study source, but not for commercial purposes.
-<br><br>
-David Buckley
-<br>
-January/2024
-
-
-
-
+<br><br>David Buckley
+<br>January/2024

@@ -281,7 +281,7 @@
     <div class="container reveal fade-bottom pt-5">
       <div class="card" style="max-height: 100%; background-color: #00A8E8;">
         <div class="row align-items-center">
-          <div class="col-lg-6 text-center order-sm-1">
+          <div class="mb-5 col-lg-6 text-center order-sm-1">
             <img src="{% static 'images/contact.jpg' %}" class="img-fluid rounded-5" alt="...">
           </div>
           <div class="col-lg-6 pt-4 pt-sm-0 order-sm-2">
@@ -322,29 +322,31 @@
     <section id="articles" class="pt-5">
       <div class="container pt-sm-5 pt-0 pb-4 pb-sm-5 reveal fade-bottom">
         <h2 class="text-blue fw-bold pb-3 pb-sm-4 ps-3 mb-4">Recent Articles</h2>
-        <div class="row ps-5">
+        <div class="row ps-">
           <div class="justify-content-center pt-1 card col-lg-6 align-items-center">
             <a href="{% url 'article' pk=article_1.id %}" class="link-unstyled mb-3">
-              <img src="{{ article_1.image.url }}" class="image-large card-img-top rounded-2" alt="...">
+              <img src="{{ article_1.image.url }}" style="max-width: 500px;" class="image-large card-img-top rounded-2" alt="...">
             </a>
-            <div class="card-body text-center">
+            <div class="card-body text-center" style="max-width: 500px">
               <h5 class="card-title fw-bold text-blue">{{ article_1.name }}</h5>
               <p class="card-text fw-medium text-blue-dark">{{ article_1.description }}</p>
             </div>
           </div>
           <div class="justify-content-center pt-5 pt-lg-1 card col-lg-6 align-items-center">
             <a href="{% url 'article' pk=article_2.id %}" class="link-unstyled mb-3">
-              <img src="{{ article_2.image.url }}" class="image-large card-img-top rounded-2" alt="...">
+              <img src="{{ article_2.image.url }}" style="max-width: 500px;" class="image-large card-img-top rounded-2" alt="...">
             </a>
-            <div class="card-body text-center">
+            <div class="card-body text-center" style="max-width: 500px">
               <h5 class="card-title fw-bold text-blue">{{ article_2.name }}</h5>
               <p class="card-text fw-medium text-blue-dark">{{ article_2.description }}</p>
             </div>
           </div>
         </div>
-        <a role="button" class="botao btn btn-lg align-self-center mt-3 fw-bold text-white mb-5"
-           style="background-color: #00A8E8" href="{% url 'articles-list' %}"><i
-            class="bi bi-chevron-right"></i>&nbsp;All Articles</a>
+        <div class="text-center mt-4">
+          <a role="button" class="botao btn btn-lg align-self-center mt-3 fw-bold text-white mb-5"
+             style="background-color: #00A8E8" href="{% url 'articles-list' %}"><i
+              class="bi bi-chevron-right"></i>&nbsp;All Articles</a>
+        </div>
       </div>
     </section>
     <!--Articles ends-->
